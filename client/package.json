@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "version": "0.0.0",
+  "description": "Front-end for readit",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
