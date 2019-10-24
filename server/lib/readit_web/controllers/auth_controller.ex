@@ -1,7 +1,7 @@
 defmodule ReaditWeb.Controllers.AuthController do
   use ReaditWeb, :controller
 
-  alias Readit.{Accounts, Accounts.User}
+  alias Readit.Accounts
 
   def authenticate(conn, %{"email" => email, "password" => password}) do
     do_authenticate(conn, Accounts.authenticate(email, password))
