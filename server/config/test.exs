@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :readit, Readit.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "root",
   database: "readit_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
