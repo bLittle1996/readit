@@ -3,7 +3,7 @@ defmodule Readit.Auth.Guardian do
 
   alias Readit.Accounts
 
-  def subject_for_token(user, _claims) do
+  def subject_for_token(%Accounts.User{} = user, _claims) do
     {:ok, to_string(user.id)}
   end
 
