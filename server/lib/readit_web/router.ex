@@ -18,15 +18,13 @@ defmodule ReaditWeb.Router do
   scope "/api", ReaditWeb do
     pipe_through [:api, :auth]
 
-    get "/", Controllers.TestController, :hello
-
     post "/token", Controllers.AuthController, :authenticate
+
+    resources "/users", Controllers.UserController, only: [:show]
   end
 
   # restricted routes
   scope "/api", ReaditWeb do
     pipe_through [:api, :auth, :ensure_auth]
-
-    get "/hidden", Controllers.TestController, :hello
   end
 end

@@ -4,6 +4,7 @@ defmodule Readit.Accounts.User do
   alias Readit.Auth
 
   @primary_key {:id, :binary_id, autogenerate: true}
+  @derive {Jason.Encoder, except: [:__meta__, :__struct__, :password]}
   schema "users" do
     field :email, :string
     field :password, :string
